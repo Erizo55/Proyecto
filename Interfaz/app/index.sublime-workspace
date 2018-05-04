@@ -1,0 +1,521 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"fl",
+				"flex-grow"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"cor",
+				"correcto"
+			],
+			[
+				"onke",
+				"onkeypress\tAttr"
+			],
+			[
+				"pr",
+				"provincia"
+			],
+			[
+				"pa",
+				"pais"
+			],
+			[
+				"di",
+				"direccion"
+			],
+			[
+				"ap",
+				"apellidos2"
+			],
+			[
+				"nom",
+				"nombre2"
+			],
+			[
+				"e",
+				"email"
+			],
+			[
+				"dire",
+				"direccion2"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"marign",
+				"margin-top"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fle",
+				"flex-direction"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"boder",
+				"border-radius"
+			],
+			[
+				"BACK",
+				"background-color"
+			],
+			[
+				"icon",
+				"icon-twitter_pie"
+			],
+			[
+				"faceb",
+				"icon-facebook_pie"
+			],
+			[
+				"com",
+				"comun"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"b",
+				"box-sizing"
+			],
+			[
+				"resumen",
+				"resumenBtn"
+			],
+			[
+				"watc",
+				"watchjs"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"de",
+				"desarrollo"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"margn",
+				"margin-bottom"
+			],
+			[
+				"video",
+				"videoEl"
+			],
+			[
+				"mute",
+				"muteUnmute"
+			],
+			[
+				"mut",
+				"muteUnmute"
+			],
+			[
+				"play",
+				"playPause"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/ProyectoDaw/app/css/styles.css",
+		"/C/ProyectoDaw/app/registro.html",
+		"/C/ProyectoDaw/app/index.html",
+		"/C/ProyectoDaw/app/principal - copia.html",
+		"/C/ProyectoDaw/app/css/styles - copia.css",
+		"/C/ProyectoDaw/app/ScriptsBD/crearBDproyecto.sql",
+		"/C/ProyectoDaw/app/principal.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/styles/registro.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/registro.html",
+		"/C/ProyectoDaw/app/css/reset.css",
+		"/C/ProyectoDaw/app/css/cabecera.css",
+		"/C/ProyectoDaw/app/css/media.css",
+		"/C/ProyectoDaw/app/css/style.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/inicio.html",
+		"/C/ProyectoDiw/app/index.html",
+		"/C/ProyectoDiw/gulpfile.js",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DWEC/ERICK/SupuestoGestoriaErick/validacion.js",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DWEC/ERICK/SupuestoGestoriaErick/presupuesto.html",
+		"/C/Users/Usuario/Desktop/MotioninJoy/ds3/local/misc/xbox360_controller.js",
+		"/C/Users/Usuario/Desktop/MotioninJoy/ds3/local/misc/playstation_controller.js",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema4/ejercicio2.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema4/ejercicio8.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema4/ejercicio1.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema3/ejercicio25.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema3/ejercicio21.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema3/ejercicio24.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Desarrollo web en Entorno Cliente/UT 4/Practicas clase/ut4practica3.html",
+		"/F/Desarrollo web en Entorno Cliente/UT 4/ENTREGA TRABAJOS Y EJERCICIOS/ejercicio9.html",
+		"/F/Desarrollo web en Entorno Cliente/UT 4/ENTREGA TRABAJOS Y EJERCICIOS/ejercicio8.html",
+		"/F/Desarrollo web en Entorno Cliente/UT 4/ENTREGA TRABAJOS Y EJERCICIOS/ejercicio2.html",
+		"/F/Desarrollo web en Entorno Cliente/UT 4/ENTREGA TRABAJOS Y EJERCICIOS/ejercicio1.html",
+		"/F/Desarrollo web en Entorno Cliente/Examen/ErickMartinRoblesEJ1.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema4/ejercicio9.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Practicas/JavaScript/Tema5/P05EJEMPLO05-DOM.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Practicas/JavaScript/Tema4/practica2.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DWEC/ERICK/SupuestoGestoriaErick/styles.css",
+		"/C/Users/Usuario/AppData/Local/Temp/Rar$EXa0.811/PARA EL BECARIO/JAVASCRIPT/Trabajos/Manifest/index.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Desarrollo web en Entorno Cliente/UT 1/ENTREGA TRABAJOS Y EJERCICIOS/EJERCICIO 4/EJERCICIO4AlbertoMartinez.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Desarrollo web en Entorno Cliente/UT 1/ENTREGA TRABAJOS Y EJERCICIOS/EJERCICIO 3/EJERCICIO3AlbertoMartinez.html",
+		"/C/Users/Usuario/Desktop/PARA EL BECARIO/PARA EL BECARIO/JAVASCRIPT/Ejercicios/Tema1/Ejercicio3/index.html",
+		"/C/ProyectoDiw/app/js/controlresumen.js",
+		"/C/ProyectoDiw/app/css/cabecera.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Tema 3/Actividades/PR0304 - Canvas/PR0304 - Canvas.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Tema 2/Actividades/PR0208 - Pestañas con z-index y target/estilos.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Tema 2/Actividades/PR0208 - Pestañas con z-index y target/PR0208 - Pestañas con z-index y target.html",
+		"/C/ProyectoDiw/app/css/media.css",
+		"/C/ProyectoDiw/app/css/icono.css",
+		"/C/ProyectoDiw/app/css/style.css",
+		"/C/Users/Usuario/AppData/Local/Temp/Rar$DIa0.178/style.css",
+		"/C/ProyectoDiw/app/css/icons/iconos_datos.svg",
+		"/C/Users/Usuario/AppData/Local/Temp/Rar$DIa0.883/style.css",
+		"/C/ProyectoDiw/app/css/iconos_datos.css",
+		"/C/ProyectoDiw/app/css/img/Fuentes de Iconos/styleIconos.css",
+		"/C/Users/Usuario/Desktop/drive-download-20170529T192525Z-001/ProyectoDIW/view/entrena.html",
+		"/C/Users/Usuario/Desktop/drive-download-20170529T192525Z-001/ProyectoDIW/webroot/js/calendarJS.js",
+		"/C/Users/Usuario/Desktop/drive-download-20170529T192525Z-001/ProyectoDIW/webroot/js/jquery-3.2.1.js",
+		"/C/Users/Usuario/Desktop/drive-download-20170529T192525Z-001/ProyectoDIW/view/css/styles.min.css",
+		"/C/xampp/htdocs/recuperacion/ScriptsBD/EMRDBMantenimiento/cargainicialDBMantenimiento.sql",
+		"/C/Users/Usuario/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/cargainicialDBMantenimiento.sql",
+		"/C/Users/Usuario/AppData/Local/Packages/Microsoft.MicrosoftEdge_8wekyb3d8bbwe/TempState/Downloads/crearDBMantenimiento.sql",
+		"/C/ProyectoDiw/app/css/cuerpo.css",
+		"/C/ProyectoDiw/app/css/pie.css",
+		"/C/ProyectoDiw/app/css/img/reposo.png",
+		"/C/ProyectoDiw/app/css/img/correr.png",
+		"/C/ProyectoDiw/app/css/styles.css",
+		"/C/xampp/htdocs/recuperacion/ScriptsBD/EMRDBLoginLogoff/crearDBLoginLogoff.sql",
+		"/C/xampp/htdocs/recuperacion/doc/classes/UsuarioPDO.html",
+		"/C/ProyectoDiw/app/css/img/mapa.png",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/styles/inicio.css",
+		"/C/ProyectoDiw/app/js/jquery.js",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DWEC/ERICK/calculadoraDaw1.0.js",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DWEC/ERICK/controlUsuario.js",
+		"/C/xampp/htdocs/recuperacion/ScriptsBD/EMRDBdepartamentos/borrarDAW211_EMRDBdepartamentos.sql",
+		"/C/xampp/htdocs/recuperacion/ScriptsBD/EMRDBdepartamentos/insertarDAW211_EMRDBdepartamentos.sql",
+		"/C/xampp/htdocs/recuperacion/ScriptsBD/EMRDBdepartamentos/crearDAW211_EMRDBdepartamentos.sql",
+		"/C/xampp/htdocs/recuperacion/tema3/index.html",
+		"/C/xampp/htdocs/recuperacion/tema2/index.html",
+		"/C/xampp/htdocs/recuperacion/tema4/index.html",
+		"/C/xampp/htdocs/recuperacion/css/styles.css",
+		"/C/xampp/htdocs/recuperacion/tema4/plantilla.php",
+		"/C/xampp/htdocs/recuperacion/tema3/plantilla.php",
+		"/C/xampp/htdocs/recuperacion/tema3/practica7.php",
+		"/C/xampp/htdocs/recuperacion/tema4/practica4.php",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/RECUPERACION/DIW/app/index.html",
+		"/C/xampp/htdocs/bitnami.css",
+		"/C/xampp/htdocs/recuperacion/index.php",
+		"/C/xampp/htdocs/recuperacion/tema2/codigo.php",
+		"/C/xampp/htdocs/recuperacion/tema2/plantilla.php",
+		"/C/xampp/htdocs/recuperacion/tema3/practica17.php",
+		"/C/xampp/htdocs/recuperacion/plantilla.php",
+		"/C/xampp/htdocs/recuperacion/tema3/codigo.php",
+		"/C/Users/Usuario/Downloads/UTorrent/ReCore.PC/ReadMe.html",
+		"/C/xampp/htdocs/recuperacion/tema3/practica4.php",
+		"/C/xampp/htdocs/recuperacion/index.html",
+		"/C/xampp/htdocs/recuperacion/tema7/index.html",
+		"/C/xampp/htdocs/recuperacion/tema6/index.html",
+		"/C/xampp/htdocs/recuperacion/tema5/index.html",
+		"/C/Users/Usuario/Desktop/baldo/ej3.html",
+		"/C/Users/Usuario/Desktop/baldo/ej5.html",
+		"/C/Users/Usuario/Desktop/baldo/ej2.html",
+		"/C/Users/Usuario/Desktop/baldo/ej4.html",
+		"/C/Users/Usuario/Desktop/baldo/ej1.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/tema2/index.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/tema4/index.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/tema3/index.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/index.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/css/styles.css",
+		"/C/Users/Usuario/Desktop/pagina heraclio/css/tema2.css",
+		"/C/Users/Usuario/Desktop/pagina heraclio/css/tema3.css",
+		"/C/Users/Usuario/Desktop/pagina heraclio/css/tema4.css",
+		"/C/Users/Usuario/Desktop/pagina heraclio/css/style.css",
+		"/C/Users/Usuario/Desktop/pagina heraclio/u03/index.html",
+		"/C/Users/Usuario/Desktop/pagina heraclio/u02/index.html",
+		"/C/Users/Usuario/Desktop/pagina/index.html",
+		"/C/Users/Usuario/Desktop/pagina/u03/index.html",
+		"/C/Users/Usuario/Desktop/pagina/css/style.css",
+		"/C/Users/Usuario/Desktop/pagina/u02/index.html",
+		"/C/Users/Usuario/Desktop/pagina/css/styles.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/styles/actividades.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Proyecto-20170304T113809Z-001/Proyecto/Proyecto victor/actividades.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/Tema 3/Practica 2/estilos.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/Tema 3/Practica 1/index.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/Tema 3/Practica 1/estilos.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/Tema 3/Practica 4/index.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/Tema 3/Practica 2/index.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Tema 3/Actividades/PR0302 - Vídeo a pantalla completa/estilos.css",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/entregar/index.html",
+		"/C/Users/Usuario/Desktop/CLASE/2º DAW/Diseño de Interfaces Web/Tema 3/Actividades/PR0302 - Vídeo a pantalla completa/PR0302 - Vídeo a pantalla completa.html"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cont",
+			"overfl",
+			"70",
+			"SAUCES",
+			"*",
+			"flec",
+			"flecha",
+			"scr",
+			"a{",
+			"control",
+			".tabla_calen",
+			".blq_complet",
+			".blq_calen",
+			"Documentacion",
+			"<p>",
+			"href=\"\"",
+			"center",
+			"(en desarrollo)",
+			"en desarrollo",
+			"href=\"\"",
+			"img",
+			"min-w",
+			"25px",
+			"min-width",
+			"trans",
+			"item",
+			"main",
+			"{\n",
+			"center"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,260 @@
+/***** GENERAL *****/
+html {
+  position: relative;
+  min-height: 100%;
+}
+a{
+	text-decoration: none;
+}
+
+/***** HEADER *****/
+header{
+	width: 100%;
+	height: 65px;
+	background-color: #2d8958;
+	color: #ffcc69;
+	border-bottom: 10px solid #ffcc69;
+}
+.cont_header{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0 10%;
+}
+.logo_header{
+	display: flex;
+	align-items: center;
+}
+.form_login{
+	display: flex;
+	align-items: center;
+}
+input.enlace{
+	border:0; 
+	background-color:#fff; 
+	text-decoration:underline; 
+	color:#000; 
+	cursor:pointer;
+}
+
+/***** BODY *****/
+body{
+	background-color: #d8e3e5;
+	height: 100%;
+	margin-bottom: 70px;
+}
+section{
+	margin: 74px 10%; 
+}
+.panel_inicio{
+	height: 650px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	border:1px solid grey;
+}
+.imagen_inicio{
+	background-image: url("/css/img/azoteasauces.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%;
+}
+.panel_inicio>div:first-child{
+	width: 50%;
+}
+.panel_inicio>div:last-child{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #162329;
+}
+.titulo_principal{
+	color: #ffcc69;
+	font-weight: 600px;
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.boton_registro{
+	padding: 15px 45px;
+	background-color: #2d8958;
+	text-decoration: none; 
+	color: #ffcc69; 
+	border-radius: 20px;
+}
+.boton_volver{
+	margin-left: 35px;
+	padding: 10px 25px;
+	background-color: #162329;
+	text-decoration: none; 
+	color: #ffcc69; 
+	border-radius: 20px;
+}
+
+
+
+.panel_registro{
+	height: 650px;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	border:1px solid grey;
+	overflow: hidden;
+}
+.panel_registro>div:first-child{
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(22, 35, 41, 0.85);
+	color: #ffcc69;
+}
+.panel_registro>div:last-child{
+	width: 25%;
+}
+.formulario_registro{
+	margin: 5%;
+}
+.formulario_registro>div{
+	margin-bottom: 5px;
+}
+.formulario_registro>div>input{
+	width: 100%;
+	height: 22px;
+}
+.formulario_registro>div:nth-child(2){
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.formulario_registro>div:nth-child(2)>div{
+	display: flex;
+	flex-direction: column;
+	width: 48%;
+}
+.formulario_registro>div:nth-child(2)>div:first-child{
+	margin-right: 4%;
+}
+.formulario_registro>div:nth-child(2)>div>input{
+	width: 100%;
+	height: 22px;
+}
+.formulario_registro>div>select{
+	width: 100.68%;
+	height: 28px;
+}
+.formulario_registro>div>textarea{
+	width: 99.5%;
+	height: 100px;
+}
+.titulo_registro{
+	text-align: center;
+	font-size: 22px;
+	margin-bottom: 25px !important;
+}
+.imagen_registro{
+	background-image: url("/css/img/chico_sauces.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.form_login_principal{
+	display: flex;
+	align-items: center;
+	margin-left: 20%;
+}
+.cont_section{
+	border: 1px solid grey;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: #ffcc69;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.menu{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: rgba(22, 35, 41, 1);
+	width: 100%;
+	justify-content: center;
+	height: 15%;
+	border: 5px solid #2d8958;
+}
+.menu>a{
+	color: #ffcc69;
+	height: 100%;
+	line-height: 50px;
+	margin: 0px 5px;
+	padding: 0px 5px;
+	text-align: center;
+}
+.menu>a:hover{
+	background-color: rgba(45, 137, 88, 1);
+}
+.trabajos, .examenes{
+	width: 100%;
+	background-color: rgb(51, 64, 69);
+}
+.trabajos>p, .examenes>p{
+	width: 100%;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	background-color: rgba(22, 35, 41, 1);
+}
+.panel_general{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.panel_general>a{
+	width: 150px;
+	height: 150px;
+	background-color: rgba(45, 137, 88, 1);
+	border: 1px solid #ffcc69;
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.panel_general>a>p{
+	margin-top: 10px;
+}
+.imagen_carpeta{
+	width: 75%;
+	height: 75%;
+	background-image: url("/css/img/carpeta.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/***** FOOTER *****/
+footer{
+	position: absolute;
+  	bottom: 0;
+  	width: 100%;
+	background-color: #162329;
+	height: 70px;
+	border-top: 5px solid #d39f3c;
+}
+.cont_footer{
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0 5%;
+}
+
