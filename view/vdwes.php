@@ -39,11 +39,10 @@
                                                 echo $_SESSION['usuario']-> getnombreAlumno();
                                                 echo " ";
                                                 echo $_SESSION['usuario']->getapellidosAlumno();
-                                                
                                             ?>
                                             !
                                         </p>
-					<button class="boton_volver" onclick="location.href='index.php?location=login&logoff=true'">CERRAR SESION</button>
+					<button class="boton_volver" onclick="location.href='index.php?location=inicio&logoff=true'">CERRAR SESION</button>
 				</div>
 			</div>
 		</header>
@@ -52,6 +51,7 @@
 			<div class="cont_section">
 				<div class="menu">
                                     <?php
+                                        $classactivo="class='menu_activo'";
                                         $ArrayObjeto= (array) $_SESSION['usuario'];
                                         foreach ($ArrayObjeto as $atributos => $value) {
                                             if($atributos="*asignaturasAlumno"){
@@ -71,7 +71,7 @@
                                                     }else if($value2=="DESARROLLO WEB EN ENTORNO CLIENTE"){
                                                         echo "<button onclick=".'"'."location.href='index.php?location=dwec'".'"'.">".$value2."</button>";
                                                     }else if($value2=="DESARROLLO WEB EN ENTORNO SERVIDOR"){
-                                                        echo "<button onclick=".'"'."location.href='index.php?location=dwes'".'"'.">".$value2."</button>";
+                                                        echo "<button  ".$classactivo." onclick=".'"'."location.href='index.php?location=dwes'".'"'.">".$value2."</button>";
                                                     }else if($value2=="DESARROLLO DE APLICACIONES WEB"){
                                                         echo "<button onclick=".'"'."location.href='index.php?location=daw'".'"'.">".$value2."</button>";
                                                     }else if($value2=="DISEÑO DE INTERFACES WEB"){
@@ -85,7 +85,7 @@
 
                                     ?>
 				</div>
-				<!--<div class="trabajos">
+				<div class="trabajos">
 					<p>TRABAJOS</p>
 					<div class="panel_general">
 						<a>
@@ -204,7 +204,7 @@
 
 					</div>
 				</div>
-                                -->
+                                
 			</div>
 		</section>
 

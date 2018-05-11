@@ -16,27 +16,15 @@
 	<body>
 		<header>
 			<div class="cont_header">
-				<div class="logo_header">
+                                <a href="http://www.proyecto.local/" class="logo_header">
 					<img src="/css/img/logosauces_peque.png" alt="Logo Sauces">
 					<p>I.E.S. LOS SAUCES</p>
-				</div>
+				</a>
 
 				<div style="width: 45%;">
 					
 				</div>
-
-				<div class="form_login">
-                                    <?php
-                                        if (isset($_GET["errorLogin"])) { // Si existe un error al validar el usuario, se muestra.
-                                            echo "<span class='error_login'>Usuario o contraseña incorrectos</span>";
-					}
-                                    ?>
-                                    <form action="controller/clogin.php" method="post">
-					Usuario: <input type="text" name="usuario">
-					Contraseña: <input type="password" name="password">
-                                        <input type="submit" name="login" value="Entrar"/><br>      
-                                    </form>
-				</div>
+				
 			</div>
 		</header>
 
@@ -47,11 +35,19 @@
 					</div>
 					<div>
 						<h1 class="titulo_principal">BIENVENIDO A LA WEBCENTER<br> DEL I.E.S. LOS SAUCES</h1>
-						<a href="registro.html" class="boton_registro">REGISTRATE</a><br>
-						<a href="principal_daw1.html" class="boton_registro">EMPEZAR DAW1</a><br>
-						<a href="principal_daw2.html" class="boton_registro">EMPEZAR DAW2</a><br>
-						<a href="principal_smr1.html" class="boton_registro">EMPEZAR SMR1</a><br>
-						<a href="principal_smr2.html" class="boton_registro">EMPEZAR SMR2</a>
+                                                <div class="form_login">
+                                                    <?php
+                                                        if (isset($_GET["errorLogin"])) { // Si existe un error al validar el usuario, se muestra.
+                                                            echo "<span class='error_login'>Usuario o contraseÃ±a incorrectos</span><br>";
+                                                        }
+                                                    ?>
+                                                    <form action="controller/clogin.php" method="post">
+                                                        Usuario:<br><input type="text" name="usuario"><br>
+                                                        Contraseña:<br><input type="password" name="password"><br>
+                                                        <input class="boton_registro" style="width:50%; font-size: 18px;" type="submit" name="login" value="ENTRAR"/><br>      
+                                                    </form>
+                                                </div>
+                                                <a class="boton_registro" href="/view/vregistro.php">REGISTRATE</a><br>
 					</div>
 				</div>
 		</section>

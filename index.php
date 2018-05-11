@@ -1,6 +1,5 @@
 <?php
     require_once 'model/Usuario.php';
-    require_once 'model/Departamento.php';
     require_once 'config/constDB.php';
 
     session_start();

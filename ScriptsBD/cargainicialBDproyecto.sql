@@ -41,5 +41,5 @@ INSERT INTO asignatura values
 ("SER","SERVICIOS EN RED",NULL);
 
 INSERT INTO trabajo values 
-("1","ejemplo1",NULL,NULL,"0",NULL),
-("2","ejemplo2",NULL,NULL,"0",NULL);
+("1","ejemplo1","examen2",NULL,NULL,"0",NULL),
+("2","ejemplo2","trabajo1",NULL,NULL,"0",NULL);

@@ -45,6 +45,7 @@ idProfesor INT( 3 )
 CREATE TABLE DBproyectodaw.trabajo (
 idTrabajo INT( 3 ) NOT NULL PRIMARY KEY AUTO_INCREMENT ,
 descTrabajo VARCHAR( 25 ) NOT NULL  ,
+tipo VARCHAR( 10 ) NOT NULL,
 idAlumno INT( 3 ) ,
 idAsignatura VARCHAR( 4 ) ,
 nota INT(2) ,

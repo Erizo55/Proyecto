@@ -15,18 +15,18 @@
 	<body>
 		<header>
 			<div class="cont_header">
-				<div class="logo_header">
+                                <a href="http://www.proyecto.local/" class="logo_header">
 					<img src="/css/img/logosauces_peque.png" alt="Logo Sauces">
-					<p>I.E.S. LOS SAUCES(Enlace al inicio)</p>
-				</div>
+					<p>I.E.S. LOS SAUCES</p>
+				</a>
 
-				<div style="width: 45%;">
+				<div style="width: 60%;">
 					
 				</div>
 
-				<div class="form_login">
+				<div class="registro_volver">
 					<p>PAGINA DE REGISTRO</p>
-					<a href="index.php" class="boton_volver">Volver</a>
+					<button class="boton_volver" onclick="location.href='http://www.proyecto.local/'">VOLVER</button>
 				</div>
 			</div>
 		</header>

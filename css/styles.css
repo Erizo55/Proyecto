@@ -6,6 +6,9 @@ html {
 a{
 	text-decoration: none;
 }
+a:visited{
+    text-decoration: none;
+}
 
 /***** HEADER *****/
 header{
@@ -24,10 +27,31 @@ header{
 .logo_header{
 	display: flex;
 	align-items: center;
+        color: #ffcc69;
 }
 .form_login{
 	display: flex;
+        flex-direction: column;
 	align-items: center;
+        color:#ffcc69;
+        text-align: center;
+        width: 65%;
+        margin-bottom: 25px;
+}
+.registro_volver{
+        display: flex;
+	align-items: center;
+        color:#ffcc69;
+        text-align: center;
+}
+.form_login>form{
+        width: 100%;
+        font-size: 18px;
+}
+.form_login>form>input{
+	margin: 12.5px 0;
+        width: 85%;
+        text-align: center;
 }
 input.enlace{
 	border:0; 
@@ -35,6 +59,10 @@ input.enlace{
 	text-decoration:underline; 
 	color:#000; 
 	cursor:pointer;
+}
+.error_login{
+        color:red;
+        text-transform: uppercase;
 }
 
 /***** BODY *****/
@@ -82,6 +110,10 @@ section{
 	text-decoration: none; 
 	color: #ffcc69; 
 	border-radius: 20px;
+        outline:none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
 }
 .boton_volver{
 	margin-left: 35px;
@@ -90,8 +122,10 @@ section{
 	text-decoration: none; 
 	color: #ffcc69; 
 	border-radius: 20px;
+        outline:none;
+        border: none;
+        cursor: pointer;
 }
-
 
 
 .panel_registro{
@@ -189,6 +223,22 @@ section{
 	height: 15%;
 	border: 5px solid #2d8958;
 }
+.menu>button{
+        background-color: rgba(22, 35, 41, 1);
+	color: #ffcc69;
+	height: 100%;
+	line-height: 50px;
+	margin: 0px 5px;
+	padding: 0px 5px;
+	text-align: center;
+        outline:none;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+}
+.menu>button:hover{
+	background-color: rgba(45, 137, 88, 1);
+}
 .menu>a{
 	color: #ffcc69;
 	height: 100%;
@@ -199,6 +249,9 @@ section{
 }
 .menu>a:hover{
 	background-color: rgba(45, 137, 88, 1);
+}
+.menu_activo{
+        background-color: rgba(45, 137, 88, 1) !important;
 }
 .trabajos, .examenes{
 	width: 100%;

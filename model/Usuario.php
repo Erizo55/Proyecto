@@ -166,5 +166,17 @@
             } 
             return $usuarioObjeto; 
         }
+        
+        /**
+         * Llamar a indertarDepartamento de la clase DepartamentoPDO y solo en caso afirmativo guardarlo como objeto
+         * @param string $codigo codigo de departamento a insertar
+         * @param string $descripcion descripcion de departamento a insertar
+         * @return object devuelve un objeto Departamento
+         */
+        public static function insertarUsuario($idUsuario, $descUsuario, $password, $perfil, $ultimaConexion) {
+            $departamentoObjeto = new Usuario($codigo, $descripcion);
+            $correcto = DepartamentoPDO::insertarDepartamento($codigo, $descripcion);
+            return $correcto;
+        }
     }
 ?>

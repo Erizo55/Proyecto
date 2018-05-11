@@ -39,11 +39,10 @@
                                                 echo $_SESSION['usuario']-> getnombreAlumno();
                                                 echo " ";
                                                 echo $_SESSION['usuario']->getapellidosAlumno();
-                                                
                                             ?>
                                             !
                                         </p>
-					<button class="boton_volver" onclick="location.href='index.php?location=login&logoff=true'">CERRAR SESION</button>
+					<button class="boton_volver" onclick="location.href='index.php?location=inicio&logoff=true'">CERRAR SESION</button>
 				</div>
 			</div>
 		</header>
@@ -52,12 +51,13 @@
 			<div class="cont_section">
 				<div class="menu">
                                     <?php
+                                        $classactivo="class='menu_activo'";
                                         $ArrayObjeto= (array) $_SESSION['usuario'];
                                         foreach ($ArrayObjeto as $atributos => $value) {
                                             if($atributos="*asignaturasAlumno"){
                                                 foreach($value as $atributos2 => $value2){
                                                     if($value2=="SISTEMAS INFORMATICOS"){
-                                                        echo "<button onclick=".'"'."location.href='index.php?location=si'".'"'.">".$value2."</button>";
+                                                        echo "<button ".$classactivo." onclick=".'"'."location.href='index.php?location=si'".'"'.">".$value2."</button>";
                                                     }else if($value2=="BASES DE DATOS"){
                                                         echo "<button onclick=".'"'."location.href='index.php?location=bdd'".'"'.">".$value2."</button>";
                                                     }else if($value2=="PROGRAMACION"){
@@ -85,7 +85,7 @@
 
                                     ?>
 				</div>
-				<!--<div class="trabajos">
+				<div class="trabajos">
 					<p>TRABAJOS</p>
 					<div class="panel_general">
 						<a>
@@ -204,7 +204,7 @@
 
 					</div>
 				</div>
-                                -->
+                                
 			</div>
 		</section>
 
