@@ -98,16 +98,6 @@
                                     ?>
 				</div>
                                     
-				<div class="trabajos">
-                                
-					<p>$_SESSION</p>
-                                        
-					<div class="panel_general">
-                                        <?php
-                                            print_r($_SESSION); // Se imprime la sesión actual.
-                                        ?>
-					</div>
-				</div>
 				
 			</div>
 		</section>

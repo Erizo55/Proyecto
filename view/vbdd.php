@@ -36,9 +36,26 @@
 				<div class="form_login_principal">
 					<p>¡ Bienvenid@
                                             <?php
+                                            $claseprofesor="";
+                                            if($_SESSION['usuario']->getperfil()=="Alumno"){
+                                                $claseprofesor="examenes";
                                                 echo $_SESSION['usuario']-> getnombreAlumno();
                                                 echo " ";
                                                 echo $_SESSION['usuario']->getapellidosAlumno();
+                                            }if($_SESSION['usuario']->getperfil()=="Profesor"){
+                                                $claseprofesor="hidden";
+                                                echo $_SESSION['usuario']-> getnombreProfesor();
+                                                echo " ";
+                                                echo $_SESSION['usuario']->getapellidosProfesor();
+                                            }
+                                            if($_SESSION['usuario']->getperfil()=="Administrador"){
+                                                $claseprofesor="examenes";
+                                                echo $_SESSION['usuario']-> getnombreAlumno();
+                                                echo " ";
+                                                echo $_SESSION['usuario']->getapellidosAlumno();
+                                            }
+                                                
+                                                
                                             ?>
                                             !
                                         </p>
@@ -88,119 +105,174 @@
 				<div class="trabajos">
 					<p>TRABAJOS</p>
 					<div class="panel_general">
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
+                                            <form method="post" style="margin:0;" class='formulario_registro' action='index.php?location=bdd&subirtrabajo=true' enctype="multipart/form-data">
+							<div class="titulo_registro">
+								<h1>Subir archivo</h1>
+                                                                    <?php
+                                                                        echo "<p class='error_login'>".$_GET['mensajetrabajo']."</p>";
+                                                                    ?>
+							</div>
+							<div style="justify-content: left">
+                                                            <div style="width: 100%">
+                                                                        <input type="file" name="archivo" id="archivo" maxlength="75">
+								</div>
+							</div>
+							<div>
+                                                            <input class="boton_registro" style="line-height: 0px;" type='submit' name='subirtrabajo' value='Subir'>
+							</div>
+						</form>
+                                                
+						<?php
+                                                    
+                                                    $ftp_server="192.168.1.123";
+                                                    $ftp_user = "adminproyecto";
+                                                    $ftp_pass = "paso";
+                                                    
+                                                    // establecer una conexión básica
+                                                    $conn_id = ftp_connect($ftp_server) or die("No se pudo conectar a $ftp_server");
+                                                    
+                                                    ftp_login($conn_id, $ftp_user, $ftp_pass);
+                                                    
+                                                    $directorioraiz='/public_html/archivos/bdd/';
+                                                    
+                                                    // cambiar al directorio public_html
+                                                    ftp_chdir($conn_id, $directorioraiz);
+                                                    
+                                                    $directorio=$_SESSION['usuario']-> getdescUsuario();
+                                                    ftp_mkdir($conn_id, $directorio);
+                                                    
+                                                    $directorioraiz=$directorioraiz.$directorio;
+                                                    $directoriotrabajos=$directorioraiz."/trabajos";
+                                                    
+                                                    ftp_mkdir($conn_id, $directoriotrabajos);
+                                                    
+                                                    $files = ftp_nlist($conn_id, $directoriotrabajos);
+                                                    foreach ($files as $file => $value) {
+                                                        $archivos = explode('/',$value);
+                                                        $ruta= $archivos[2].'/'.$archivos[3].'/'.$archivos[4].'/'.$archivos[5].'/'.$archivos[6];
+                                                        echo "<button onclick=".'"'."location.href='http://www.proyecto.local/".$ruta."'".'"'."><div class='imagen_carpeta'></div><p>".$archivos[6]."</p></button>";
+                                                    }   
+                                                ?>
+                                            
 					</div>
+                                        
 				</div>
 				<div class="examenes">
 					<p>EXAMENES</p>
 					<div class="panel_general">
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
+                                                <form method="post" style="margin:0;" class='formulario_registro' action='index.php?location=bdd&subirexamen=true' enctype="multipart/form-data">
+							<div class="titulo_registro">
+								<h1>Subir archivo</h1>
+                                                                    <?php
+                                                                        echo "<p class='error_login'>".$_GET['mensajeexamen']."</p>";
+                                                                    ?>
+							</div>
+							<div style="justify-content: left">
+                                                            <div style="width: 100%">
+                                                                        <input type="file" name="archivo" id="archivo" maxlength="75">
+								</div>
+							</div>
+							<div>
+                                                            <input class="boton_registro" style="line-height: 0px;" type='submit' name='subirtrabajo' value='Subir'>
+							</div>
+						</form>
+						<?php
+                                                    $directorioexamenes=$directorioraiz."/examenes";
+                                                    ftp_mkdir($conn_id, $directorioexamenes);
+                                                    $files = ftp_nlist($conn_id, $directorioexamenes);
+                                                    foreach ($files as $file => $value) {
+                                                        $archivos = explode('/',$value);
+                                                        $ruta= $archivos[2].'/'.$archivos[3].'/'.$archivos[4].'/'.$archivos[5].'/'.$archivos[6];
+                                                        echo "<button onclick=".'"'."location.href='http://www.proyecto.local/".$ruta."'".'"'."><div class='imagen_carpeta'></div><p>".$archivos[6]."</p></button>";
+                                                    }   
+                                                    
+                                                    // cerrar la conexión ftp
+                                                    ftp_close($conn_id); 
+                                                ?>
+
+					</div>
+				</div>
+                            <div class="<?php echo $claseprofesor; ?>">
+					<p>PROFESOR</p>
+					<div class="panel_general">
+						<?php
+                                                $profesor="";
+                                                try{
+                                                            /*
+                                                             * sentecia sql de insertar sobre la base de datos
+                                                             */
+                                                            $sqlbuscarprofesor="SELECT profesor.nombre FROM profesor INNER JOIN asignatura ON profesor.idProfesor=asignatura.idProfesor WHERE asignatura.idAsignatura LIKE 'bdd'";
+                                                            
+                                                            /*
+                                                             * Conexion con la base de datos
+                                                             */
+                                                            $conexion=new PDO('mysql:host=localhost;dbname=DBproyectodaw','adminerick','paso');
+
+                                                            /*
+                                                             * resultado de la consulta
+                                                             */
+                                                            $resultado= $conexion->query($sqlbuscarprofesor);
+                                                            $registroProfesor=$resultado->fetch(PDO::FETCH_OBJ);
+                                                            if($resultado->rowCount()>0){
+                                                                $profesor=$registroProfesor -> nombre;
+                                                            }
+                                                            
+                                                            /*
+                                                             * cerramos la conexion a la base de datos
+                                                             */
+                                                            unset($conexion);
+                                                        }
+                                                        catch(Exception $miExeception){
+                                                            /*
+                                                             * Imprimir codigo de error
+                                                             */
+                                                            print("Codigo de error: ".$miExeception->getCode()."<br>");
+                                                            /*
+                                                             * Imprimir mensaje de la excepcion
+                                                             */
+                                                            print("Error: ".$miExeception->getMessage());
+                                                        }
+                                                        
+                                                    $ftp_server="192.168.1.123";
+                                                    $ftp_user = "adminproyecto";
+                                                    $ftp_pass = "paso";
+                                                    
+                                                    // establecer una conexión básica
+                                                    $conn_id = ftp_connect($ftp_server) or die("No se pudo conectar a $ftp_server");
+                                                    
+                                                    ftp_login($conn_id, $ftp_user, $ftp_pass);
+                                                    
+                                                    $directorioraiz='/public_html/archivos/bdd/';
+                                                    
+                                                    // cambiar al directorio public_html
+                                                    ftp_chdir($conn_id, $directorioraiz);
+                                                    
+                                                    
+                                                    $directorioraiz=$directorioraiz.$profesor;
+                                                    $directoriotrabajos=$directorioraiz."/trabajos";
+                                                    $directorioexamenes=$directorioraiz."/examenes";
+                                                    
+                                                    ftp_mkdir($conn_id, $directoriotrabajos);
+                                                    
+                                                    $files = ftp_nlist($conn_id, $directoriotrabajos);
+                                                    foreach ($files as $file => $value) {
+                                                        $archivos = explode('/',$value);
+                                                        $ruta= $archivos[2].'/'.$archivos[3].'/'.$archivos[4].'/'.$archivos[5].'/'.$archivos[6];
+                                                        echo "<button onclick=".'"'."location.href='http://www.proyecto.local/".$ruta."'".'"'."><div class='imagen_carpeta'></div><p>".$archivos[6]."</p></button>";
+                                                    }  
+                                                    
+                                                    ftp_mkdir($conn_id, $directorioexamenes);
+                                                    
+                                                    $files = ftp_nlist($conn_id, $directorioexamenes);
+                                                    foreach ($files as $file => $value) {
+                                                        $archivos = explode('/',$value);
+                                                        $ruta= $archivos[2].'/'.$archivos[3].'/'.$archivos[4].'/'.$archivos[5].'/'.$archivos[6];
+                                                        echo "<button onclick=".'"'."location.href='http://www.proyecto.local/".$ruta."'".'"'."><div class='imagen_carpeta'></div><p>".$archivos[6]."</p></button>";
+                                                    }  
+                                                    
+                                                    // cerrar la conexión ftp
+                                                    ftp_close($conn_id); 
+                                                ?>
 
 					</div>
 				</div>

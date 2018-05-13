@@ -200,7 +200,9 @@ section{
     background-repeat: no-repeat, no-repeat;
     background-size: 100% 100%;
 }
-
+.hidden{
+    display: none;
+}
 
 .form_login_principal{
 	display: flex;
@@ -291,6 +293,26 @@ section{
 }
 .panel_general>a>p{
 	margin-top: 10px;
+}
+.panel_general>button{
+	width: 150px;
+	height: 150px;
+	background-color: rgba(45, 137, 88, 1);
+	border: 1px solid #ffcc69;
+	margin: 15px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: stretch;
+	justify-content: center;
+        background-image: url("/css/img/carpeta.png");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 75% 75%;
+        background-position: top;
+        color: #ffcc69;
+}
+.panel_general>button>p{
+	padding-top: 105px;
 }
 .imagen_carpeta{
 	width: 75%;
