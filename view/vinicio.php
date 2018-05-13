@@ -36,9 +36,21 @@
 				<div class="form_login_principal">
 					<p>¡ Bienvenid@
                                             <?php
+                                            if($_SESSION['usuario']->getperfil()=="Alumno"){
                                                 echo $_SESSION['usuario']-> getnombreAlumno();
                                                 echo " ";
                                                 echo $_SESSION['usuario']->getapellidosAlumno();
+                                            }if($_SESSION['usuario']->getperfil()=="Profesor"){
+                                                echo $_SESSION['usuario']-> getnombreProfesor();
+                                                echo " ";
+                                                echo $_SESSION['usuario']->getapellidosProfesor();
+                                            }
+                                            if($_SESSION['usuario']->getperfil()=="Administrador"){
+                                                echo $_SESSION['usuario']-> getnombreAlumno();
+                                                echo " ";
+                                                echo $_SESSION['usuario']->getapellidosAlumno();
+                                            }
+                                                
                                                 
                                             ?>
                                             !
@@ -85,126 +97,18 @@
 
                                     ?>
 				</div>
-				<!--<div class="trabajos">
-					<p>TRABAJOS</p>
+                                    
+				<div class="trabajos">
+                                
+					<p>$_SESSION</p>
+                                        
 					<div class="panel_general">
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
+                                        <?php
+                                            print_r($_SESSION); // Se imprime la sesión actual.
+                                        ?>
 					</div>
 				</div>
-				<div class="examenes">
-					<p>EXAMENES</p>
-					<div class="panel_general">
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 1</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div> 
-							<p>TEMA 2</p>
-						</a>
-						<a>
-							<div class="imagen_carpeta"></div>
-							<p>TEMA 3</p>
-						</a>
-
-					</div>
-				</div>
-                                -->
+				
 			</div>
 		</section>
 

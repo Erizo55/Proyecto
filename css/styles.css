@@ -49,9 +49,12 @@ header{
         font-size: 18px;
 }
 .form_login>form>input{
-	margin: 12.5px 0;
+	margin: 10px 0;
         width: 85%;
         text-align: center;
+}
+.form_login>form>input:nth-child(2),.form_login>form>input:nth-child(5){
+        height: 25px;
 }
 input.enlace{
 	border:0; 
@@ -159,22 +162,25 @@ section{
 	width: 100%;
 	height: 22px;
 }
-.formulario_registro>div:nth-child(2){
+.formulario_registro>div:nth-child(2),.formulario_registro>div:nth-child(3){
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-.formulario_registro>div:nth-child(2)>div{
+.formulario_registro>div:nth-child(2)>div,.formulario_registro>div:nth-child(3)>div{
 	display: flex;
 	flex-direction: column;
 	width: 48%;
 }
-.formulario_registro>div:nth-child(2)>div:first-child{
+.formulario_registro>div:nth-child(2)>div:first-child,.formulario_registro>div:nth-child(3)>div:first-child{
 	margin-right: 4%;
 }
-.formulario_registro>div:nth-child(2)>div>input{
+.formulario_registro>div:nth-child(2)>div>input,.formulario_registro>div:nth-child(3)>div>input{
 	width: 100%;
 	height: 22px;
+}
+.formulario_registro>div:nth-child(3)>div>select{    
+        height: 26px;
 }
 .formulario_registro>div>select{
 	width: 100.68%;

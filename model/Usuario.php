@@ -59,6 +59,16 @@
         protected $asignaturasAlumno;
         
         /**
+         * @var string variable para guarda el nombre de alumno del usuario
+         */
+        protected $nombreProfesor;
+        
+        /**
+         * @var string variable para guarda los apellidos de alumno del usuario
+         */
+        protected $apellidosProfesor;
+        
+        /**
          *  Devuelve el codigo del usuario de la clase
          * @return string codigo de la clase
          */
@@ -137,10 +147,44 @@
         }
         
         /**
+         *  Devuelve la ultima conexion del usuario de la clase
+         * @return float ultima conexion de la clase
+         */
+        public function getnombreProfesor() {
+            return $this->nombreProfesor; 
+            
+        }
+        
+        /**
+         *  Devuelve la ultima conexion del usuario de la clase
+         * @return float ultima conexion de la clase
+         */
+        public function getapellidosProfesor() {
+            return $this->apellidosProfesor; 
+            
+        }
+        
+        function __construct()
+	{
+		//obtengo un array con los parámetros enviados a la función
+		$params = func_get_args();
+		//saco el número de parámetros que estoy recibiendo
+		$num_params = func_num_args();
+		//cada constructor de un número dado de parámtros tendrá un nombre de función
+		//atendiendo al siguiente modelo __construct1() __construct2()...
+		$funcion_constructor ='__construct'.$num_params;
+		//compruebo si hay un constructor con ese número de parámetros
+		if (method_exists($this,$funcion_constructor)) {
+			//si existía esa función, la invoco, reenviando los parámetros que recibí en el constructor original
+			call_user_func_array(array($this,$funcion_constructor),$params);
+		}
+	}
+        
+        /**
          *  Guardar codUsuario, descUsuario, password, perfil, ultimaConexion y contadorAccesos de un array
          * @param array $row array con los atributos de la clase
          */
-        public function __construct($row) {
+        public function __construct1($row) {
             $this->idUsuario = $row['idUsuario'];
             $this->descUsuario = $row['descUsuario'];
             $this->password = $row['password'];
@@ -149,7 +193,17 @@
             $this->nombreAlumno = $row['nombreAlumno'];
             $this->apellidosAlumno = $row['apellidosAlumno'];
             $this->cursoAlumno = $row['cursoAlumno'];
+            $this->nombreProfesor = $row['nombreProfesor'];
+            $this->apellidosProfesor = $row['apellidosProfesor'];
             $this->asignaturasAlumno = $row['asignaturasAlumno'];
+        }
+        
+        public function __construct4($idUsuario, $descUsuario, $password, $perfil) {
+            $this->idUsuario =$idUsuario;
+            $this->descUsuario = $descUsuario;
+            $this->password = $password;
+            $this->perfil =$perfil;
+            $this->ultimaConexion =NULL;
         }
         
         /**
@@ -165,18 +219,6 @@
                 $usuarioObjeto = new Usuario($usuario); 
             } 
             return $usuarioObjeto; 
-        }
-        
-        /**
-         * Llamar a indertarDepartamento de la clase DepartamentoPDO y solo en caso afirmativo guardarlo como objeto
-         * @param string $codigo codigo de departamento a insertar
-         * @param string $descripcion descripcion de departamento a insertar
-         * @return object devuelve un objeto Departamento
-         */
-        public static function insertarUsuario($idUsuario, $descUsuario, $password, $perfil, $ultimaConexion) {
-            $departamentoObjeto = new Usuario($codigo, $descripcion);
-            $correcto = DepartamentoPDO::insertarDepartamento($codigo, $descripcion);
-            return $correcto;
         }
     }
 ?>

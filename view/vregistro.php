@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 	<head>
 		<meta charset="UTF-8">
@@ -8,7 +9,7 @@
 			<link rel="stylesheet" href="/css/styles.css">
 		<!-- endbuild-->
 		<!--build:js js/scripts.min.js -->
-			
+                        <script type='text/javascript' src='../js/funciones.js'></script>
 		<!-- endbuild-->
 	</head>
 
@@ -34,47 +35,156 @@
 		<section>
 				<div class="panel_registro">
 					<div>
-						<form method="post" class="formulario_registro">
+                                            <?php
+                                                $entradaOK=true;
+
+                                                    $error="";
+                                                    
+                                                    $idAlumno=0;
+                                                    $nombre="";
+                                                    $apellidos="";
+                                                    $fecha_nacimiento="";
+                                                    $correo="";
+                                                    
+                                                    $curso="";
+                                                    
+                                                    $idUsuario="";
+                                                    $descUsuario="";
+                                                    $password="";
+                                                    $perfil="";
+
+                                                    if(isset($_POST['enviar'])){
+                                                        $idUsuario = $_POST['idusuario']; // Código del usuario.
+                                                        $descUsuario = $_POST['usuario']; // descripcion del usuario.
+                                                        $password = hash('sha256', $_POST['contrasenya']); // Contraseña del usuario.
+                                                        $perfil = $_POST['perfil']; // perfil del usuario.
+                                                        $nombre = $_POST['nombre']; // perfil del usuario.
+                                                        $apellidos = $_POST['apellidos']; // perfil del usuario.
+                                                        $fecha_nacimiento = $_POST['fecha']; // perfil del usuario.
+                                                        $correo = $_POST['email']; // perfil del usuario.
+                                                        $curso = $_POST['curso']; // perfil del usuario.
+                                                        
+                                                    }else{
+                                                        $entradaOK=false;
+                                                    }
+                                                    if($entradaOK){
+                                                        try{
+                                                            /*
+                                                             * sentecia sql de insertar sobre la base de datos
+                                                             */
+                                                            $sentenciaSQL = "INSERT INTO usuario VALUES ('".$idUsuario."','".$descUsuario."','".$password."','".$perfil."',NULL)";
+                                                            $sqlalumno="INSERT INTO alumno VALUES (NULL,'".$nombre."','".$apellidos."','".$fecha_nacimiento."','".$correo."','".$idUsuario."')";
+                                                            $sqlbuscaridalumno="SELECT idAlumno FROM alumno INNER JOIN usuario ON alumno.idUsuario=usuario.idUsuario WHERE alumno.idUsuario LIKE '".$idUsuario."'";
+                                                            
+                                                            /*
+                                                             * Conexion con la base de datos
+                                                             */
+                                                            $conexion=new PDO('mysql:host=localhost;dbname=DBproyectodaw','adminerick','paso');
+
+                                                            /*
+                                                             * resultado de la consulta
+                                                             */
+                                                            $resultado= $conexion->query($sentenciaSQL);
+                                                            /*
+                                                             * si no encuentra el usuario y la contraseÃ±a volver al formulario y mensaje de error
+                                                             */
+                                                            if(!$resultado) {
+                                                                $mensaje="El usuario ya existe o no se ha podido registrar.";
+                                                            }
+                                                            else{
+                                                                    $resultadoinsertalumno = $conexion->query($sqlalumno);
+                                                                    if($resultadoinsertalumno){
+                                                                        $resultadobuscaridalumno = $conexion->query($sqlbuscaridalumno);
+                                                                        $registroIdalumno=$resultadobuscaridalumno->fetch(PDO::FETCH_OBJ);
+                                                                        if($resultadobuscaridalumno->rowCount()>0){
+                                                                            $idAlumno=$registroIdalumno -> idAlumno;
+                                                                            $sqlcurso="INSERT INTO matricula VALUES (NULL,'".$idAlumno."', '".$curso."')";
+                                                                            $resultadocurso = $conexion->query($sqlcurso);
+                                                                            if($resultadocurso){
+                                                                                $mensaje="El alumno se ha matriculado corrrectamente";
+                                                                            }
+                                                                            else{
+                                                                                $mensaje="El alumno no se ha podido matricular.";
+                                                                            }
+                                                                        }
+                                                                    }else{
+                                                                        $mensaje="El alumno no se ha podido registrar.";
+                                                                    }
+                                                                
+                                                            }
+                                                            /*
+                                                             * cerramos la conexion a la base de datos
+                                                             */
+                                                            unset($conexion);
+                                                           
+                                                            header('refresh:0; url = http://www.proyecto.local/index.php?location=login&registro=true&mensaje='.$mensaje.'');
+                                                        }
+                                                        catch(Exception $miExeception){
+                                                            /*
+                                                             * Imprimir codigo de error
+                                                             */
+                                                            print("Codigo de error: ".$miExeception->getCode()."<br>");
+                                                            /*
+                                                             * Imprimir mensaje de la excepcion
+                                                             */
+                                                            print("Error: ".$miExeception->getMessage());
+                                                        }
+                                                    }else{
+                                            ?>
+                                            <form method="post" class='formulario_registro' onsubmit='return validar()' action=''>
 							<div class="titulo_registro">
 								<h1>Usted se esta registrando, por favor introduzca los datos adecuados</h1>
+                                                                
 							</div>
 							<div>
 								<div>
 									<label>Nombre</label>
-									<input type="text" name="nombre">
+                                                                        <input type="text" pattern="/^[a-zA-Z]*$/" id="nombre" name="nombre">
 								</div>
 								<div>
 									<label>Apellidos</label>
-									<input type="text" name="apellidos">
+                                                                        <input type="text" pattern="/^[a-zA-Z\s]*$/" id="apellidos" name="apellidos">
+								</div>
+							</div>
+                                                        <div>
+								<div>
+									<label>Fecha a nacimiento(aaaa/mm/dd)</label>
+                                                                        <input type="datetime" id="fecha" name="fecha">
+								</div>
+								<div>
+									<label>Curso</label>
+									<select name="curso" id="curso">
+                                                                                <option value="null"> </option>
+                                                                                <option value="DAW1">DAW1</option>
+                                                                                <option value="DAW2">DAW2</option>
+                                                                        </select>
 								</div>
 							</div>
 							<div>
-								<label>Fecha a nacimiento</label>
-								<input type="date" name="fecha">
+								
 							</div>
 							<div>
 								<label>Correo electronico</label>
-								<input type="email" name="email">
+								<input type="email" id="email" name="email">
+							</div>
+                                                        <div>
+								<label>Identificador de tu usuario</label>
+								<input type="text" id="idusuario" name="idusuario">
 							</div>
 							<div>
 								<label>Usuario</label>
-								<input type="text" name="usuario">
+								<input type="text" id="usuario" name="usuario">
 							</div>
 							
 							<div>
-								<label>Contraseña (poner boton mostrar contraseña)</label>
-								<input type="password" name="contrasenya">
-							</div>
-							<div>
-								<label>Repetir contraseña (poner boton mostrar contraseña)</label>
-								<input type="password" name="contrasenya">
+								<label>Contraseña</label>
+								<input type="password" id="contrasenya" name="contrasenya">
 							</div>
 							<div>
 								<label>Perfil de usuario</label>
-								<select name="frecuencia">
+								<select name="perfil"  id="perfil">
 									<option value="null"> </option>
-									<option value="profesor">Profesor</option>
-									<option value="alumno">Alumno</option>
+									<option value="Alumno">Alumno</option>
 								</select>
 							</div>
 							<div>
@@ -82,12 +192,16 @@
 								<textarea id="terminos" disabled>Terminos y condiciones</textarea>
 							</div>
 							<div>
-								<p><input type="checkbox" name="terminos">Acepto los terminos</p>
+								<p><input type="checkbox"  id="condiciones" name="terminos">Acepto los terminos</p>
 							</div>
 							<div>
-								<input type='submit' name='enviar' value='Confirmar'>
+                                                            <input class="boton_registro" style="line-height: 0px;" type='submit' name='enviar' value='Confirmar'>
 							</div>
 						</form>
+                                            
+                                                <?php
+                                                    }
+                                                ?>
 					</div>
 
 					<div class="imagen_registro">

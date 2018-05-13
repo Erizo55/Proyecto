@@ -40,6 +40,9 @@
                                                         if (isset($_GET["errorLogin"])) { // Si existe un error al validar el usuario, se muestra.
                                                             echo "<span class='error_login'>Usuario o contraseÃ±a incorrectos</span><br>";
                                                         }
+                                                        if (isset($_GET["registro"])) { // Si existe un error al validar el usuario, se muestra.
+                                                            echo "<span class='error_login'>".$_GET["mensaje"]."</span><br>";
+                                                        }
                                                     ?>
                                                     <form action="controller/clogin.php" method="post">
                                                         Usuario:<br><input type="text" name="usuario"><br>
